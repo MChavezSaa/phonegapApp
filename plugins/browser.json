@@ -12,6 +12,9 @@
     },
     "cordova-plugin-device": {
       "PACKAGE_NAME": "cl.ubiobio.proyectoPrueba"
+    },
+    "cordova-plugin-geolocation": {
+      "PACKAGE_NAME": "cl.ubiobio.proyectoPrueba"
     }
   },
   "dependent_plugins": {}

@@ -8,6 +8,7 @@
     "dependencies": {
         "cordova-browser": "^5.0.4",
         "cordova-plugin-device": "2.0.2",
+        "cordova-plugin-geolocation": "4.0.1",
         "cordova-plugin-vibration": "3.1.0"
     },
     "cordova": {
@@ -16,7 +17,8 @@
         ],
         "plugins": {
             "cordova-plugin-vibration": {},
-            "cordova-plugin-device": {}
+            "cordova-plugin-device": {},
+            "cordova-plugin-geolocation": {}
         }
     }
 }

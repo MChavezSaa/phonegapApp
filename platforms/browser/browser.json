@@ -23,6 +23,9 @@
     },
     "cordova-plugin-device": {
       "PACKAGE_NAME": "cl.ubiobio.proyectoPrueba"
+    },
+    "cordova-plugin-geolocation": {
+      "PACKAGE_NAME": "cl.ubiobio.proyectoPrueba"
     }
   },
   "dependent_plugins": {},
@@ -60,6 +63,7 @@
   ],
   "plugin_metadata": {
     "cordova-plugin-vibration": "3.1.0",
-    "cordova-plugin-device": "2.0.2"
+    "cordova-plugin-device": "2.0.2",
+    "cordova-plugin-geolocation": "4.0.1"
   }
 }

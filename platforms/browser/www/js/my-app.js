@@ -28,6 +28,27 @@ var app = new Framework7({
 
 var $$ = Dom7;
 
+//GPS Uses
+function functionSuccess(position){
+
+              console.log('Latitude: '          + position.coords.latitude );         
+              console.log('Longitude: '         + position.coords.longitude      );       
+              console.log('Altitude: '          + position.coords.altitude           );   
+              console.log('Accuracy: '          + position.coords.accuracy           );   
+              console.log('Altitude Accuracy: ' + position.coords.altitudeAccuracy   );   
+              console.log('Heading: '           + position.coords.heading            );   
+              console.log('Speed: '             + position.coords.speed              );   
+
+              $$("#lat").html(position.coords.latitude);
+              $$("#lgn").html(position.coords.longitude);
+              
+}
+function functionFailure(error){
+console.log("Hubo un Error!");
+}
+var gpsOptions= { timeout: 5000, enableHighAccuracy:true}
+var watchID = navigator.geolocation.watchPosition(functionSuccess,functionFailure,gpsOptions);
+
 // Alert
 $$('.open-alert').on('click', function () {
   app.dialog.alert('Modelo '+device.model+ " "+ device.manufacturer);
@@ -40,6 +61,8 @@ var mainView = app.views.create('.view-main');
 // Handle Cordova Device Ready Event
 $$(document).on('deviceready', function() {
     console.log("Device is ready!");
+    var watchID = navigator.geolocation.watchPosition(position,error,gpsOptions);
+
 });
 
 // Option 1. Using one 'page:init' handler for all pages

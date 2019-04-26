@@ -35,7 +35,8 @@ module.exports.metadata =
 // TOP OF METADATA
 {
     "cordova-plugin-vibration": "3.1.0",
-    "cordova-plugin-device": "2.0.2"
+    "cordova-plugin-device": "2.0.2",
+    "cordova-plugin-geolocation": "4.0.1"
 }
 // BOTTOM OF METADATA
 });
