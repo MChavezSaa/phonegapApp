@@ -56,7 +56,7 @@
                 <div class="page-content">
                         <p>Latitud: <span id="lat"></span></p>
                         <p>Longitud: <span id="lgn"></span></p>
-                        <div class="block block-strong">
+                        <!--<div class="block block-strong">
                                 <p class="row">
                                   <button class="col button open-alert">Alert</button>
                                   <button class="col button open-confirm">Confirm</button>
@@ -66,7 +66,10 @@
                                   <button class="col button open-login">Login</button>
                                   <button class="col button open-password">Password</button>
                                 </p>
-                              </div>
+                              </div>-->
+                              <!--map here-->
+                            <div id="map" style="height: 70%;"></div>
+
                     <p>Page content goes here</p>
                     <!-- Link to another page -->
                     <a href="/about/" data-view=".page-content">About app</a>
@@ -76,7 +79,10 @@
     </div>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvsNbfp-YQFN5aJ9mS0Q4CIXoifKY0MQE&callback=initMap"
+    async defer></script>
     <script type="text/javascript" src="js/my-app.js"></script>
+    
 </body>
 
 </html>

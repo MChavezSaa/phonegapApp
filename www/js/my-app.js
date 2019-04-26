@@ -28,6 +28,16 @@ var app = new Framework7({
 
 var $$ = Dom7;
 
+//map here
+var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 8
+        });
+      }
+
+
 //GPS Uses
 function functionSuccess(position){
 
