@@ -30,11 +30,28 @@ var $$ = Dom7;
 
 //map here
 var map;
+var marker;
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
           center: {lat: -34.397, lng: 150.644},
           zoom: 8
         });
+        marker = new google.maps.Marker({
+          position: {lat: -34.397, lng: 150.644},
+          map: map
+        });
+        map.addListener('click', function(e) {
+          placeMarkerAndPanTo(e.latLng, map);
+          navigator.vibrate([600,500]);
+
+        });      
+      }
+      function placeMarkerAndPanTo(latLng, map) {
+        var marker = new google.maps.Marker({
+          position: latLng,
+          map: map
+        });
+        map.panTo(latLng);
       }
 
 
@@ -51,7 +68,10 @@ function functionSuccess(position){
 
               $$("#lat").html(position.coords.latitude);
               $$("#lgn").html(position.coords.longitude);
-              
+              var pos= {lat: position.coords.latitude, lng: position.coords.longitude };
+              map.setCenter(pos);
+              map.setZoom(18);
+              marker.setPosition(pos);
 }
 function functionFailure(error){
 console.log("Hubo un Error!");
