@@ -1,0 +1,22 @@
+{
+    "name": "cl.ubiobio.proyectoprueba",
+    "version": "1.0.0",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "displayName": "proyectoPrueba",
+    "dependencies": {
+        "cordova-browser": "^5.0.4",
+        "cordova-plugin-device": "2.0.2",
+        "cordova-plugin-vibration": "3.1.0"
+    },
+    "cordova": {
+        "platforms": [
+            "browser"
+        ],
+        "plugins": {
+            "cordova-plugin-vibration": {},
+            "cordova-plugin-device": {}
+        }
+    }
+}
